@@ -5,7 +5,7 @@
  * PHP version 7.4
  *
  * @category Class
- * @package  OpenAPI\Client
+ * @package  WalletPay
  * @author   OpenAPI Generator team
  * @link     https://openapi-generator.tech
  */
@@ -26,17 +26,17 @@
  * Do not edit the class manually.
  */
 
-namespace OpenAPI\Client\Model;
+namespace WalletPay\Model;
 
 use \ArrayAccess;
-use \OpenAPI\Client\ObjectSerializer;
+use \WalletPay\ObjectSerializer;
 
 /**
  * OrderReconciliationList Class Doc Comment
  *
  * @category Class
  * @description Response payload, present if status is SUCCESS
- * @package  OpenAPI\Client
+ * @package  WalletPay
  * @author   OpenAPI Generator team
  * @link     https://openapi-generator.tech
  * @implements \ArrayAccess<string, mixed>
@@ -58,7 +58,7 @@ class OrderReconciliationList implements ModelInterface, ArrayAccess, \JsonSeria
       * @var string[]
       */
     protected static $openAPITypes = [
-        'items' => '\OpenAPI\Client\Model\OrderReconciliationItem[]'
+        'items' => '\WalletPay\Model\OrderReconciliationItem[]'
     ];
 
     /**
@@ -296,7 +296,7 @@ class OrderReconciliationList implements ModelInterface, ArrayAccess, \JsonSeria
     /**
      * Gets items
      *
-     * @return \OpenAPI\Client\Model\OrderReconciliationItem[]
+     * @return \WalletPay\Model\OrderReconciliationItem[]
      */
     public function getItems()
     {
@@ -306,7 +306,7 @@ class OrderReconciliationList implements ModelInterface, ArrayAccess, \JsonSeria
     /**
      * Sets items
      *
-     * @param \OpenAPI\Client\Model\OrderReconciliationItem[] $items items
+     * @param \WalletPay\Model\OrderReconciliationItem[] $items items
      *
      * @return self
      */
@@ -409,5 +409,3 @@ class OrderReconciliationList implements ModelInterface, ArrayAccess, \JsonSeria
         return json_encode(ObjectSerializer::sanitizeForSerialization($this));
     }
 }
-
-

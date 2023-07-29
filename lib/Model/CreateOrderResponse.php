@@ -5,7 +5,7 @@
  * PHP version 7.4
  *
  * @category Class
- * @package  OpenAPI\Client
+ * @package  WalletPay
  * @author   OpenAPI Generator team
  * @link     https://openapi-generator.tech
  */
@@ -26,16 +26,16 @@
  * Do not edit the class manually.
  */
 
-namespace OpenAPI\Client\Model;
+namespace WalletPay\Model;
 
 use \ArrayAccess;
-use \OpenAPI\Client\ObjectSerializer;
+use \WalletPay\ObjectSerializer;
 
 /**
  * CreateOrderResponse Class Doc Comment
  *
  * @category Class
- * @package  OpenAPI\Client
+ * @package  WalletPay
  * @author   OpenAPI Generator team
  * @link     https://openapi-generator.tech
  * @implements \ArrayAccess<string, mixed>
@@ -59,7 +59,7 @@ class CreateOrderResponse implements ModelInterface, ArrayAccess, \JsonSerializa
     protected static $openAPITypes = [
         'status' => 'string',
         'message' => 'string',
-        'data' => '\OpenAPI\Client\Model\OrderPreview'
+        'data' => '\WalletPay\Model\OrderPreview'
     ];
 
     /**
@@ -401,7 +401,7 @@ class CreateOrderResponse implements ModelInterface, ArrayAccess, \JsonSerializa
     /**
      * Gets data
      *
-     * @return \OpenAPI\Client\Model\OrderPreview|null
+     * @return \WalletPay\Model\OrderPreview|null
      */
     public function getData()
     {
@@ -411,7 +411,7 @@ class CreateOrderResponse implements ModelInterface, ArrayAccess, \JsonSerializa
     /**
      * Sets data
      *
-     * @param \OpenAPI\Client\Model\OrderPreview|null $data data
+     * @param \WalletPay\Model\OrderPreview|null $data data
      *
      * @return self
      */
@@ -514,5 +514,3 @@ class CreateOrderResponse implements ModelInterface, ArrayAccess, \JsonSerializa
         return json_encode(ObjectSerializer::sanitizeForSerialization($this));
     }
 }
-
-

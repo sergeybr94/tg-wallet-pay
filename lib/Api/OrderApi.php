@@ -4,7 +4,7 @@
  * PHP version 7.4
  *
  * @category Class
- * @package  OpenAPI\Client
+ * @package  WalletPay
  * @author   OpenAPI Generator team
  * @link     https://openapi-generator.tech
  */
@@ -25,7 +25,7 @@
  * Do not edit the class manually.
  */
 
-namespace OpenAPI\Client\Api;
+namespace WalletPay\Api;
 
 use GuzzleHttp\Client;
 use GuzzleHttp\ClientInterface;
@@ -34,16 +34,16 @@ use GuzzleHttp\Exception\RequestException;
 use GuzzleHttp\Psr7\MultipartStream;
 use GuzzleHttp\Psr7\Request;
 use GuzzleHttp\RequestOptions;
-use OpenAPI\Client\ApiException;
-use OpenAPI\Client\Configuration;
-use OpenAPI\Client\HeaderSelector;
-use OpenAPI\Client\ObjectSerializer;
+use WalletPay\ApiException;
+use WalletPay\Configuration;
+use WalletPay\HeaderSelector;
+use WalletPay\ObjectSerializer;
 
 /**
  * OrderApi Class Doc Comment
  *
  * @category Class
- * @package  OpenAPI\Client
+ * @package  WalletPay
  * @author   OpenAPI Generator team
  * @link     https://openapi-generator.tech
  */
@@ -129,12 +129,12 @@ class OrderApi
      * Operation create
      *
      * @param  string $wpay_store_api_key Store API key (required)
-     * @param  \OpenAPI\Client\Model\CreateOrderRequest $create_order_request create_order_request (required)
+     * @param  \WalletPay\Model\CreateOrderRequest $create_order_request create_order_request (required)
      * @param  string $contentType The value for the Content-Type header. Check self::contentTypes['create'] to see the possible values for this operation
      *
-     * @throws \OpenAPI\Client\ApiException on non-2xx response
+     * @throws \WalletPay\ApiException on non-2xx response
      * @throws \InvalidArgumentException
-     * @return \OpenAPI\Client\Model\CreateOrderResponse
+     * @return \WalletPay\Model\CreateOrderResponse
      */
     public function create($wpay_store_api_key, $create_order_request, string $contentType = self::contentTypes['create'][0])
     {
@@ -146,12 +146,12 @@ class OrderApi
      * Operation createWithHttpInfo
      *
      * @param  string $wpay_store_api_key Store API key (required)
-     * @param  \OpenAPI\Client\Model\CreateOrderRequest $create_order_request (required)
+     * @param  \WalletPay\Model\CreateOrderRequest $create_order_request (required)
      * @param  string $contentType The value for the Content-Type header. Check self::contentTypes['create'] to see the possible values for this operation
      *
-     * @throws \OpenAPI\Client\ApiException on non-2xx response
+     * @throws \WalletPay\ApiException on non-2xx response
      * @throws \InvalidArgumentException
-     * @return array of \OpenAPI\Client\Model\CreateOrderResponse, HTTP status code, HTTP response headers (array of strings)
+     * @return array of \WalletPay\Model\CreateOrderResponse, HTTP status code, HTTP response headers (array of strings)
      */
     public function createWithHttpInfo($wpay_store_api_key, $create_order_request, string $contentType = self::contentTypes['create'][0])
     {
@@ -194,23 +194,23 @@ class OrderApi
 
             switch($statusCode) {
                 case 200:
-                    if ('\OpenAPI\Client\Model\CreateOrderResponse' === '\SplFileObject') {
+                    if ('\WalletPay\Model\CreateOrderResponse' === '\SplFileObject') {
                         $content = $response->getBody(); //stream goes to serializer
                     } else {
                         $content = (string) $response->getBody();
-                        if ('\OpenAPI\Client\Model\CreateOrderResponse' !== 'string') {
+                        if ('\WalletPay\Model\CreateOrderResponse' !== 'string') {
                             $content = json_decode($content);
                         }
                     }
 
                     return [
-                        ObjectSerializer::deserialize($content, '\OpenAPI\Client\Model\CreateOrderResponse', []),
+                        ObjectSerializer::deserialize($content, '\WalletPay\Model\CreateOrderResponse', []),
                         $response->getStatusCode(),
                         $response->getHeaders()
                     ];
             }
 
-            $returnType = '\OpenAPI\Client\Model\CreateOrderResponse';
+            $returnType = '\WalletPay\Model\CreateOrderResponse';
             if ($returnType === '\SplFileObject') {
                 $content = $response->getBody(); //stream goes to serializer
             } else {
@@ -231,7 +231,7 @@ class OrderApi
                 case 200:
                     $data = ObjectSerializer::deserialize(
                         $e->getResponseBody(),
-                        '\OpenAPI\Client\Model\CreateOrderResponse',
+                        '\WalletPay\Model\CreateOrderResponse',
                         $e->getResponseHeaders()
                     );
                     $e->setResponseObject($data);
@@ -245,7 +245,7 @@ class OrderApi
      * Operation createAsync
      *
      * @param  string $wpay_store_api_key Store API key (required)
-     * @param  \OpenAPI\Client\Model\CreateOrderRequest $create_order_request (required)
+     * @param  \WalletPay\Model\CreateOrderRequest $create_order_request (required)
      * @param  string $contentType The value for the Content-Type header. Check self::contentTypes['create'] to see the possible values for this operation
      *
      * @throws \InvalidArgumentException
@@ -265,7 +265,7 @@ class OrderApi
      * Operation createAsyncWithHttpInfo
      *
      * @param  string $wpay_store_api_key Store API key (required)
-     * @param  \OpenAPI\Client\Model\CreateOrderRequest $create_order_request (required)
+     * @param  \WalletPay\Model\CreateOrderRequest $create_order_request (required)
      * @param  string $contentType The value for the Content-Type header. Check self::contentTypes['create'] to see the possible values for this operation
      *
      * @throws \InvalidArgumentException
@@ -273,7 +273,7 @@ class OrderApi
      */
     public function createAsyncWithHttpInfo($wpay_store_api_key, $create_order_request, string $contentType = self::contentTypes['create'][0])
     {
-        $returnType = '\OpenAPI\Client\Model\CreateOrderResponse';
+        $returnType = '\WalletPay\Model\CreateOrderResponse';
         $request = $this->createRequest($wpay_store_api_key, $create_order_request, $contentType);
 
         return $this->client
@@ -316,7 +316,7 @@ class OrderApi
      * Create request for operation 'create'
      *
      * @param  string $wpay_store_api_key Store API key (required)
-     * @param  \OpenAPI\Client\Model\CreateOrderRequest $create_order_request (required)
+     * @param  \WalletPay\Model\CreateOrderRequest $create_order_request (required)
      * @param  string $contentType The value for the Content-Type header. Check self::contentTypes['create'] to see the possible values for this operation
      *
      * @throws \InvalidArgumentException
@@ -422,9 +422,9 @@ class OrderApi
      * @param  string $id Order id (required)
      * @param  string $contentType The value for the Content-Type header. Check self::contentTypes['getPreview'] to see the possible values for this operation
      *
-     * @throws \OpenAPI\Client\ApiException on non-2xx response
+     * @throws \WalletPay\ApiException on non-2xx response
      * @throws \InvalidArgumentException
-     * @return \OpenAPI\Client\Model\GetOrderPreviewResponse
+     * @return \WalletPay\Model\GetOrderPreviewResponse
      */
     public function getPreview($wpay_store_api_key, $id, string $contentType = self::contentTypes['getPreview'][0])
     {
@@ -439,9 +439,9 @@ class OrderApi
      * @param  string $id Order id (required)
      * @param  string $contentType The value for the Content-Type header. Check self::contentTypes['getPreview'] to see the possible values for this operation
      *
-     * @throws \OpenAPI\Client\ApiException on non-2xx response
+     * @throws \WalletPay\ApiException on non-2xx response
      * @throws \InvalidArgumentException
-     * @return array of \OpenAPI\Client\Model\GetOrderPreviewResponse, HTTP status code, HTTP response headers (array of strings)
+     * @return array of \WalletPay\Model\GetOrderPreviewResponse, HTTP status code, HTTP response headers (array of strings)
      */
     public function getPreviewWithHttpInfo($wpay_store_api_key, $id, string $contentType = self::contentTypes['getPreview'][0])
     {
@@ -484,23 +484,23 @@ class OrderApi
 
             switch($statusCode) {
                 case 200:
-                    if ('\OpenAPI\Client\Model\GetOrderPreviewResponse' === '\SplFileObject') {
+                    if ('\WalletPay\Model\GetOrderPreviewResponse' === '\SplFileObject') {
                         $content = $response->getBody(); //stream goes to serializer
                     } else {
                         $content = (string) $response->getBody();
-                        if ('\OpenAPI\Client\Model\GetOrderPreviewResponse' !== 'string') {
+                        if ('\WalletPay\Model\GetOrderPreviewResponse' !== 'string') {
                             $content = json_decode($content);
                         }
                     }
 
                     return [
-                        ObjectSerializer::deserialize($content, '\OpenAPI\Client\Model\GetOrderPreviewResponse', []),
+                        ObjectSerializer::deserialize($content, '\WalletPay\Model\GetOrderPreviewResponse', []),
                         $response->getStatusCode(),
                         $response->getHeaders()
                     ];
             }
 
-            $returnType = '\OpenAPI\Client\Model\GetOrderPreviewResponse';
+            $returnType = '\WalletPay\Model\GetOrderPreviewResponse';
             if ($returnType === '\SplFileObject') {
                 $content = $response->getBody(); //stream goes to serializer
             } else {
@@ -521,7 +521,7 @@ class OrderApi
                 case 200:
                     $data = ObjectSerializer::deserialize(
                         $e->getResponseBody(),
-                        '\OpenAPI\Client\Model\GetOrderPreviewResponse',
+                        '\WalletPay\Model\GetOrderPreviewResponse',
                         $e->getResponseHeaders()
                     );
                     $e->setResponseObject($data);
@@ -563,7 +563,7 @@ class OrderApi
      */
     public function getPreviewAsyncWithHttpInfo($wpay_store_api_key, $id, string $contentType = self::contentTypes['getPreview'][0])
     {
-        $returnType = '\OpenAPI\Client\Model\GetOrderPreviewResponse';
+        $returnType = '\WalletPay\Model\GetOrderPreviewResponse';
         $request = $this->getPreviewRequest($wpay_store_api_key, $id, $contentType);
 
         return $this->client

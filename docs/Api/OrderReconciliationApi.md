@@ -1,4 +1,4 @@
-# OpenAPI\Client\OrderReconciliationApi
+# WalletPay\OrderReconciliationApi
 
 All URIs are relative to https://pay.wallet.tg, except if the operation defines another base path.
 
@@ -11,7 +11,7 @@ All URIs are relative to https://pay.wallet.tg, except if the operation defines 
 ## `getOrderAmount()`
 
 ```php
-getOrderAmount($wpay_store_api_key): \OpenAPI\Client\Model\OrderAmountResponse
+getOrderAmount($wpay_store_api_key): \WalletPay\Model\OrderAmountResponse
 ```
 
 
@@ -26,7 +26,7 @@ require_once(__DIR__ . '/vendor/autoload.php');
 
 
 
-$apiInstance = new OpenAPI\Client\Api\OrderReconciliationApi(
+$apiInstance = new WalletPay\Api\OrderReconciliationApi(
     // If you want use custom http client, pass your client which implements `GuzzleHttp\ClientInterface`.
     // This is optional, `GuzzleHttp\Client` will be used as default.
     new GuzzleHttp\Client()
@@ -49,7 +49,7 @@ try {
 
 ### Return type
 
-[**\OpenAPI\Client\Model\OrderAmountResponse**](../Model/OrderAmountResponse.md)
+[**\WalletPay\Model\OrderAmountResponse**](../Model/OrderAmountResponse.md)
 
 ### Authorization
 
@@ -67,7 +67,7 @@ No authorization required
 ## `getOrderList()`
 
 ```php
-getOrderList($wpay_store_api_key, $offset, $count): \OpenAPI\Client\Model\GetOrderReconciliationListResponse
+getOrderList($wpay_store_api_key, $offset, $count): \WalletPay\Model\GetOrderReconciliationListResponse
 ```
 
 
@@ -82,7 +82,7 @@ require_once(__DIR__ . '/vendor/autoload.php');
 
 
 
-$apiInstance = new OpenAPI\Client\Api\OrderReconciliationApi(
+$apiInstance = new WalletPay\Api\OrderReconciliationApi(
     // If you want use custom http client, pass your client which implements `GuzzleHttp\ClientInterface`.
     // This is optional, `GuzzleHttp\Client` will be used as default.
     new GuzzleHttp\Client()
@@ -109,7 +109,7 @@ try {
 
 ### Return type
 
-[**\OpenAPI\Client\Model\GetOrderReconciliationListResponse**](../Model/GetOrderReconciliationListResponse.md)
+[**\WalletPay\Model\GetOrderReconciliationListResponse**](../Model/GetOrderReconciliationListResponse.md)
 
 ### Authorization
 

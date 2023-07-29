@@ -5,7 +5,7 @@
  * PHP version 7.4
  *
  * @category Class
- * @package  OpenAPI\Client
+ * @package  WalletPay
  * @author   OpenAPI Generator team
  * @link     https://openapi-generator.tech
  */
@@ -26,16 +26,16 @@
  * Do not edit the class manually.
  */
 
-namespace OpenAPI\Client\Model;
+namespace WalletPay\Model;
 
 use \ArrayAccess;
-use \OpenAPI\Client\ObjectSerializer;
+use \WalletPay\ObjectSerializer;
 
 /**
  * CreateOrderRequest Class Doc Comment
  *
  * @category Class
- * @package  OpenAPI\Client
+ * @package  WalletPay
  * @author   OpenAPI Generator team
  * @link     https://openapi-generator.tech
  * @implements \ArrayAccess<string, mixed>
@@ -57,7 +57,7 @@ class CreateOrderRequest implements ModelInterface, ArrayAccess, \JsonSerializab
       * @var string[]
       */
     protected static $openAPITypes = [
-        'amount' => '\OpenAPI\Client\Model\MoneyAmount',
+        'amount' => '\WalletPay\Model\MoneyAmount',
         'description' => 'string',
         'return_url' => 'string',
         'fail_return_url' => 'string',
@@ -388,7 +388,7 @@ class CreateOrderRequest implements ModelInterface, ArrayAccess, \JsonSerializab
     /**
      * Gets amount
      *
-     * @return \OpenAPI\Client\Model\MoneyAmount
+     * @return \WalletPay\Model\MoneyAmount
      */
     public function getAmount()
     {
@@ -398,7 +398,7 @@ class CreateOrderRequest implements ModelInterface, ArrayAccess, \JsonSerializab
     /**
      * Sets amount
      *
-     * @param \OpenAPI\Client\Model\MoneyAmount $amount amount
+     * @param \WalletPay\Model\MoneyAmount $amount amount
      *
      * @return self
      */
@@ -749,5 +749,3 @@ class CreateOrderRequest implements ModelInterface, ArrayAccess, \JsonSerializab
         return json_encode(ObjectSerializer::sanitizeForSerialization($this));
     }
 }
-
-

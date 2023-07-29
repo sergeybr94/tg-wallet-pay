@@ -4,7 +4,7 @@
  * PHP version 7.4
  *
  * @category Class
- * @package  OpenAPI\Client
+ * @package  WalletPay
  * @author   OpenAPI Generator team
  * @link     https://openapi-generator.tech
  */
@@ -25,7 +25,7 @@
  * Do not edit the class manually.
  */
 
-namespace OpenAPI\Client\Api;
+namespace WalletPay\Api;
 
 use GuzzleHttp\Client;
 use GuzzleHttp\ClientInterface;
@@ -34,16 +34,16 @@ use GuzzleHttp\Exception\RequestException;
 use GuzzleHttp\Psr7\MultipartStream;
 use GuzzleHttp\Psr7\Request;
 use GuzzleHttp\RequestOptions;
-use OpenAPI\Client\ApiException;
-use OpenAPI\Client\Configuration;
-use OpenAPI\Client\HeaderSelector;
-use OpenAPI\Client\ObjectSerializer;
+use WalletPay\ApiException;
+use WalletPay\Configuration;
+use WalletPay\HeaderSelector;
+use WalletPay\ObjectSerializer;
 
 /**
  * OrderReconciliationApi Class Doc Comment
  *
  * @category Class
- * @package  OpenAPI\Client
+ * @package  WalletPay
  * @author   OpenAPI Generator team
  * @link     https://openapi-generator.tech
  */
@@ -131,9 +131,9 @@ class OrderReconciliationApi
      * @param  string $wpay_store_api_key Store API key (required)
      * @param  string $contentType The value for the Content-Type header. Check self::contentTypes['getOrderAmount'] to see the possible values for this operation
      *
-     * @throws \OpenAPI\Client\ApiException on non-2xx response
+     * @throws \WalletPay\ApiException on non-2xx response
      * @throws \InvalidArgumentException
-     * @return \OpenAPI\Client\Model\OrderAmountResponse
+     * @return \WalletPay\Model\OrderAmountResponse
      */
     public function getOrderAmount($wpay_store_api_key, string $contentType = self::contentTypes['getOrderAmount'][0])
     {
@@ -147,9 +147,9 @@ class OrderReconciliationApi
      * @param  string $wpay_store_api_key Store API key (required)
      * @param  string $contentType The value for the Content-Type header. Check self::contentTypes['getOrderAmount'] to see the possible values for this operation
      *
-     * @throws \OpenAPI\Client\ApiException on non-2xx response
+     * @throws \WalletPay\ApiException on non-2xx response
      * @throws \InvalidArgumentException
-     * @return array of \OpenAPI\Client\Model\OrderAmountResponse, HTTP status code, HTTP response headers (array of strings)
+     * @return array of \WalletPay\Model\OrderAmountResponse, HTTP status code, HTTP response headers (array of strings)
      */
     public function getOrderAmountWithHttpInfo($wpay_store_api_key, string $contentType = self::contentTypes['getOrderAmount'][0])
     {
@@ -192,23 +192,23 @@ class OrderReconciliationApi
 
             switch($statusCode) {
                 case 200:
-                    if ('\OpenAPI\Client\Model\OrderAmountResponse' === '\SplFileObject') {
+                    if ('\WalletPay\Model\OrderAmountResponse' === '\SplFileObject') {
                         $content = $response->getBody(); //stream goes to serializer
                     } else {
                         $content = (string) $response->getBody();
-                        if ('\OpenAPI\Client\Model\OrderAmountResponse' !== 'string') {
+                        if ('\WalletPay\Model\OrderAmountResponse' !== 'string') {
                             $content = json_decode($content);
                         }
                     }
 
                     return [
-                        ObjectSerializer::deserialize($content, '\OpenAPI\Client\Model\OrderAmountResponse', []),
+                        ObjectSerializer::deserialize($content, '\WalletPay\Model\OrderAmountResponse', []),
                         $response->getStatusCode(),
                         $response->getHeaders()
                     ];
             }
 
-            $returnType = '\OpenAPI\Client\Model\OrderAmountResponse';
+            $returnType = '\WalletPay\Model\OrderAmountResponse';
             if ($returnType === '\SplFileObject') {
                 $content = $response->getBody(); //stream goes to serializer
             } else {
@@ -229,7 +229,7 @@ class OrderReconciliationApi
                 case 200:
                     $data = ObjectSerializer::deserialize(
                         $e->getResponseBody(),
-                        '\OpenAPI\Client\Model\OrderAmountResponse',
+                        '\WalletPay\Model\OrderAmountResponse',
                         $e->getResponseHeaders()
                     );
                     $e->setResponseObject($data);
@@ -269,7 +269,7 @@ class OrderReconciliationApi
      */
     public function getOrderAmountAsyncWithHttpInfo($wpay_store_api_key, string $contentType = self::contentTypes['getOrderAmount'][0])
     {
-        $returnType = '\OpenAPI\Client\Model\OrderAmountResponse';
+        $returnType = '\WalletPay\Model\OrderAmountResponse';
         $request = $this->getOrderAmountRequest($wpay_store_api_key, $contentType);
 
         return $this->client
@@ -404,9 +404,9 @@ class OrderReconciliationApi
      * @param  int $count count (required)
      * @param  string $contentType The value for the Content-Type header. Check self::contentTypes['getOrderList'] to see the possible values for this operation
      *
-     * @throws \OpenAPI\Client\ApiException on non-2xx response
+     * @throws \WalletPay\ApiException on non-2xx response
      * @throws \InvalidArgumentException
-     * @return \OpenAPI\Client\Model\GetOrderReconciliationListResponse
+     * @return \WalletPay\Model\GetOrderReconciliationListResponse
      */
     public function getOrderList($wpay_store_api_key, $offset, $count, string $contentType = self::contentTypes['getOrderList'][0])
     {
@@ -422,9 +422,9 @@ class OrderReconciliationApi
      * @param  int $count (required)
      * @param  string $contentType The value for the Content-Type header. Check self::contentTypes['getOrderList'] to see the possible values for this operation
      *
-     * @throws \OpenAPI\Client\ApiException on non-2xx response
+     * @throws \WalletPay\ApiException on non-2xx response
      * @throws \InvalidArgumentException
-     * @return array of \OpenAPI\Client\Model\GetOrderReconciliationListResponse, HTTP status code, HTTP response headers (array of strings)
+     * @return array of \WalletPay\Model\GetOrderReconciliationListResponse, HTTP status code, HTTP response headers (array of strings)
      */
     public function getOrderListWithHttpInfo($wpay_store_api_key, $offset, $count, string $contentType = self::contentTypes['getOrderList'][0])
     {
@@ -467,23 +467,23 @@ class OrderReconciliationApi
 
             switch($statusCode) {
                 case 200:
-                    if ('\OpenAPI\Client\Model\GetOrderReconciliationListResponse' === '\SplFileObject') {
+                    if ('\WalletPay\Model\GetOrderReconciliationListResponse' === '\SplFileObject') {
                         $content = $response->getBody(); //stream goes to serializer
                     } else {
                         $content = (string) $response->getBody();
-                        if ('\OpenAPI\Client\Model\GetOrderReconciliationListResponse' !== 'string') {
+                        if ('\WalletPay\Model\GetOrderReconciliationListResponse' !== 'string') {
                             $content = json_decode($content);
                         }
                     }
 
                     return [
-                        ObjectSerializer::deserialize($content, '\OpenAPI\Client\Model\GetOrderReconciliationListResponse', []),
+                        ObjectSerializer::deserialize($content, '\WalletPay\Model\GetOrderReconciliationListResponse', []),
                         $response->getStatusCode(),
                         $response->getHeaders()
                     ];
             }
 
-            $returnType = '\OpenAPI\Client\Model\GetOrderReconciliationListResponse';
+            $returnType = '\WalletPay\Model\GetOrderReconciliationListResponse';
             if ($returnType === '\SplFileObject') {
                 $content = $response->getBody(); //stream goes to serializer
             } else {
@@ -504,7 +504,7 @@ class OrderReconciliationApi
                 case 200:
                     $data = ObjectSerializer::deserialize(
                         $e->getResponseBody(),
-                        '\OpenAPI\Client\Model\GetOrderReconciliationListResponse',
+                        '\WalletPay\Model\GetOrderReconciliationListResponse',
                         $e->getResponseHeaders()
                     );
                     $e->setResponseObject($data);
@@ -548,7 +548,7 @@ class OrderReconciliationApi
      */
     public function getOrderListAsyncWithHttpInfo($wpay_store_api_key, $offset, $count, string $contentType = self::contentTypes['getOrderList'][0])
     {
-        $returnType = '\OpenAPI\Client\Model\GetOrderReconciliationListResponse';
+        $returnType = '\WalletPay\Model\GetOrderReconciliationListResponse';
         $request = $this->getOrderListRequest($wpay_store_api_key, $offset, $count, $contentType);
 
         return $this->client

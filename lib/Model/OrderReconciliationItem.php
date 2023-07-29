@@ -5,7 +5,7 @@
  * PHP version 7.4
  *
  * @category Class
- * @package  OpenAPI\Client
+ * @package  WalletPay
  * @author   OpenAPI Generator team
  * @link     https://openapi-generator.tech
  */
@@ -26,16 +26,16 @@
  * Do not edit the class manually.
  */
 
-namespace OpenAPI\Client\Model;
+namespace WalletPay\Model;
 
 use \ArrayAccess;
-use \OpenAPI\Client\ObjectSerializer;
+use \WalletPay\ObjectSerializer;
 
 /**
  * OrderReconciliationItem Class Doc Comment
  *
  * @category Class
- * @package  OpenAPI\Client
+ * @package  WalletPay
  * @author   OpenAPI Generator team
  * @link     https://openapi-generator.tech
  * @implements \ArrayAccess<string, mixed>
@@ -59,13 +59,13 @@ class OrderReconciliationItem implements ModelInterface, ArrayAccess, \JsonSeria
     protected static $openAPITypes = [
         'id' => 'int',
         'status' => 'string',
-        'amount' => '\OpenAPI\Client\Model\MoneyAmount',
+        'amount' => '\WalletPay\Model\MoneyAmount',
         'external_id' => 'string',
         'customer_telegram_user_id' => 'int',
         'created_date_time' => '\DateTime',
         'expiration_date_time' => '\DateTime',
         'payment_date_time' => '\DateTime',
-        'selected_payment_option' => '\OpenAPI\Client\Model\PaymentOption'
+        'selected_payment_option' => '\WalletPay\Model\PaymentOption'
     ];
 
     /**
@@ -458,7 +458,7 @@ class OrderReconciliationItem implements ModelInterface, ArrayAccess, \JsonSeria
     /**
      * Gets amount
      *
-     * @return \OpenAPI\Client\Model\MoneyAmount
+     * @return \WalletPay\Model\MoneyAmount
      */
     public function getAmount()
     {
@@ -468,7 +468,7 @@ class OrderReconciliationItem implements ModelInterface, ArrayAccess, \JsonSeria
     /**
      * Sets amount
      *
-     * @param \OpenAPI\Client\Model\MoneyAmount $amount amount
+     * @param \WalletPay\Model\MoneyAmount $amount amount
      *
      * @return self
      */
@@ -620,7 +620,7 @@ class OrderReconciliationItem implements ModelInterface, ArrayAccess, \JsonSeria
     /**
      * Gets selected_payment_option
      *
-     * @return \OpenAPI\Client\Model\PaymentOption|null
+     * @return \WalletPay\Model\PaymentOption|null
      */
     public function getSelectedPaymentOption()
     {
@@ -630,7 +630,7 @@ class OrderReconciliationItem implements ModelInterface, ArrayAccess, \JsonSeria
     /**
      * Sets selected_payment_option
      *
-     * @param \OpenAPI\Client\Model\PaymentOption|null $selected_payment_option selected_payment_option
+     * @param \WalletPay\Model\PaymentOption|null $selected_payment_option selected_payment_option
      *
      * @return self
      */
@@ -733,5 +733,3 @@ class OrderReconciliationItem implements ModelInterface, ArrayAccess, \JsonSeria
         return json_encode(ObjectSerializer::sanitizeForSerialization($this));
     }
 }
-
-

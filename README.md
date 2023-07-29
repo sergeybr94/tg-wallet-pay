@@ -231,13 +231,13 @@ require_once(__DIR__ . '/vendor/autoload.php');
 
 
 
-$apiInstance = new OpenAPI\Client\Api\OrderApi(
+$apiInstance = new WalletPay\Api\OrderApi(
     // If you want use custom http client, pass your client which implements `GuzzleHttp\ClientInterface`.
     // This is optional, `GuzzleHttp\Client` will be used as default.
     new GuzzleHttp\Client()
 );
 $wpay_store_api_key = 'wpay_store_api_key_example'; // string | Store API key
-$create_order_request = new \OpenAPI\Client\Model\CreateOrderRequest(); // \OpenAPI\Client\Model\CreateOrderRequest
+$create_order_request = new \WalletPay\Model\CreateOrderRequest(); // \WalletPay\Model\CreateOrderRequest
 
 try {
     $result = $apiInstance->create($wpay_store_api_key, $create_order_request);
@@ -252,12 +252,12 @@ try {
 
 All URIs are relative to *https://pay.wallet.tg*
 
-Class | Method | HTTP request | Description
------------- | ------------- | ------------- | -------------
-*OrderApi* | [**create**](docs/Api/OrderApi.md#create) | **POST** /wpay/store-api/v1/order | 
-*OrderApi* | [**getPreview**](docs/Api/OrderApi.md#getpreview) | **GET** /wpay/store-api/v1/order/preview | 
-*OrderReconciliationApi* | [**getOrderAmount**](docs/Api/OrderReconciliationApi.md#getorderamount) | **GET** /wpay/store-api/v1/reconciliation/order-amount | 
-*OrderReconciliationApi* | [**getOrderList**](docs/Api/OrderReconciliationApi.md#getorderlist) | **GET** /wpay/store-api/v1/reconciliation/order-list | 
+| Class                    | Method                                                                  | HTTP request                                           | Description |
+|--------------------------|-------------------------------------------------------------------------|--------------------------------------------------------|-------------|
+| *OrderApi*               | [**create**](docs/Api/OrderApi.md#create)                               | **POST** /wpay/store-api/v1/order                      |             |
+| *OrderApi*               | [**getPreview**](docs/Api/OrderApi.md#getpreview)                       | **GET** /wpay/store-api/v1/order/preview               |             |
+| *OrderReconciliationApi* | [**getOrderAmount**](docs/Api/OrderReconciliationApi.md#getorderamount) | **GET** /wpay/store-api/v1/reconciliation/order-amount |             |
+| *OrderReconciliationApi* | [**getOrderList**](docs/Api/OrderReconciliationApi.md#getorderlist)     | **GET** /wpay/store-api/v1/reconciliation/order-list   |             |
 
 ## Models
 

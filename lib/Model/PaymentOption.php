@@ -5,7 +5,7 @@
  * PHP version 7.4
  *
  * @category Class
- * @package  OpenAPI\Client
+ * @package  WalletPay
  * @author   OpenAPI Generator team
  * @link     https://openapi-generator.tech
  */
@@ -26,17 +26,17 @@
  * Do not edit the class manually.
  */
 
-namespace OpenAPI\Client\Model;
+namespace WalletPay\Model;
 
 use \ArrayAccess;
-use \OpenAPI\Client\ObjectSerializer;
+use \WalletPay\ObjectSerializer;
 
 /**
  * PaymentOption Class Doc Comment
  *
  * @category Class
  * @description User selected payment option
- * @package  OpenAPI\Client
+ * @package  WalletPay
  * @author   OpenAPI Generator team
  * @link     https://openapi-generator.tech
  * @implements \ArrayAccess<string, mixed>
@@ -58,9 +58,9 @@ class PaymentOption implements ModelInterface, ArrayAccess, \JsonSerializable
       * @var string[]
       */
     protected static $openAPITypes = [
-        'amount' => '\OpenAPI\Client\Model\MoneyAmount',
-        'amount_fee' => '\OpenAPI\Client\Model\MoneyAmount',
-        'amount_net' => '\OpenAPI\Client\Model\MoneyAmount',
+        'amount' => '\WalletPay\Model\MoneyAmount',
+        'amount_fee' => '\WalletPay\Model\MoneyAmount',
+        'amount_net' => '\WalletPay\Model\MoneyAmount',
         'exchange_rate' => 'string'
     ];
 
@@ -326,7 +326,7 @@ class PaymentOption implements ModelInterface, ArrayAccess, \JsonSerializable
     /**
      * Gets amount
      *
-     * @return \OpenAPI\Client\Model\MoneyAmount
+     * @return \WalletPay\Model\MoneyAmount
      */
     public function getAmount()
     {
@@ -336,7 +336,7 @@ class PaymentOption implements ModelInterface, ArrayAccess, \JsonSerializable
     /**
      * Sets amount
      *
-     * @param \OpenAPI\Client\Model\MoneyAmount $amount amount
+     * @param \WalletPay\Model\MoneyAmount $amount amount
      *
      * @return self
      */
@@ -353,7 +353,7 @@ class PaymentOption implements ModelInterface, ArrayAccess, \JsonSerializable
     /**
      * Gets amount_fee
      *
-     * @return \OpenAPI\Client\Model\MoneyAmount
+     * @return \WalletPay\Model\MoneyAmount
      */
     public function getAmountFee()
     {
@@ -363,7 +363,7 @@ class PaymentOption implements ModelInterface, ArrayAccess, \JsonSerializable
     /**
      * Sets amount_fee
      *
-     * @param \OpenAPI\Client\Model\MoneyAmount $amount_fee amount_fee
+     * @param \WalletPay\Model\MoneyAmount $amount_fee amount_fee
      *
      * @return self
      */
@@ -380,7 +380,7 @@ class PaymentOption implements ModelInterface, ArrayAccess, \JsonSerializable
     /**
      * Gets amount_net
      *
-     * @return \OpenAPI\Client\Model\MoneyAmount
+     * @return \WalletPay\Model\MoneyAmount
      */
     public function getAmountNet()
     {
@@ -390,7 +390,7 @@ class PaymentOption implements ModelInterface, ArrayAccess, \JsonSerializable
     /**
      * Sets amount_net
      *
-     * @param \OpenAPI\Client\Model\MoneyAmount $amount_net amount_net
+     * @param \WalletPay\Model\MoneyAmount $amount_net amount_net
      *
      * @return self
      */
@@ -520,5 +520,3 @@ class PaymentOption implements ModelInterface, ArrayAccess, \JsonSerializable
         return json_encode(ObjectSerializer::sanitizeForSerialization($this));
     }
 }
-
-
